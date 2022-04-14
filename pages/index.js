@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { ethers } from "ethers";
 import NFTMinterABI from "../components/NFTMinter.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import toast, { Toaster} from "react-hot-toast";
+import ConnectWallet from "../components/connectWallet";
 
 
 export default function Home() {
@@ -47,8 +48,10 @@ export default function Home() {
       </Head>
       <div><Toaster/></div>
 
+      <main className="bg-gray-200 h-screen flex justify-center items-center w-full flex-col relative">
+      
+      <div className="absolute top-4 right-4"><ConnectWallet></ConnectWallet></div>
 
-      <main className="bg-gray-200 h-screen flex justify-center items-center w-full flex-col">
         <button className="rounded-2xl px-8 py-4 bg-black text-white" onClick={mintNFT}>
           Mint an NFT! Any NFT!
         </button>
