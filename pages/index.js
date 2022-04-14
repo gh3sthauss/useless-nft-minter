@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { ethers } from "ethers";
-import NFTMinterABI from "../artifacts/NFTMinter/NFTMinter.json";
-import { useState, useEffect } from "react";
+import NFTMinterABI from "../components/NFTMinter.json";
+import { useState } from "react";
 import toast, { Toaster} from "react-hot-toast";
 
 
