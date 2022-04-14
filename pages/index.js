@@ -15,7 +15,7 @@ export default function Home() {
     toast.error("Please install metamask!");
   }
   const [tx, setTx] = useState();
-  const minterAddress = "0xD4DE3e1B0671F349991f9d1dCB2bc7171F421c1C";
+  const minterAddress = ethers.utils.getAddress("0xD4DE3e1B0671F349991f9d1dCB2bc7171F421c1C");
 
 
   const minterContract = new ethers.Contract(
